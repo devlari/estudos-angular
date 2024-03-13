@@ -1,0 +1,15 @@
+<input type="text" [(ngModel)]="name">
+<button (click)="searchPokemon()">Pesquisar</button>
+<br/> <br/>
+
+<div class="card">
+    <div class="card__title">
+        <h3>#{{pokemon.id}} - {{pokemon.name}}</h3>
+    </div>
+    <div class="card__body">
+        <img src={{pokemon.sprites.front_default}} alt="Pokemón">
+    </div>
+    <div class="card__stats">
+        <span class="card__stats__type" *ngFor="let type of pokemon.types">{{type.type.name}}</span>
+    </div>
+</div>

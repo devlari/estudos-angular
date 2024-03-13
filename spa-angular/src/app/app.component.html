@@ -1,0 +1,11 @@
+<app-atributos>
+  <p>Olá, sou um parágrafo</p>
+</app-atributos>
+
+<app-card *ngIf="false" else #anotherBlock></app-card>
+
+<ng-template #anotherBlock>
+  <p>Olá, sou secreto</p>
+</ng-template>
+
+<router-outlet></router-outlet>
