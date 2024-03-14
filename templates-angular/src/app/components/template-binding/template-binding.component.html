@@ -1,0 +1,29 @@
+<h1>Text interpolation</h1>
+<p>
+    {{name}} - {{age}} - {{sum(2, 3)}} 
+</p>
+
+<hr/>
+
+<h1>Property binding</h1>
+<img [src]="imagePath" [alt]="name" /> <br/>
+<button [disabled]="isDisabled">Botão</button>
+
+<hr/>
+
+<h1>Attribute binding</h1>
+<p [attr.aria-label]="name"></p>
+
+<hr/>
+
+<h1>Class/style binding</h1>
+<p [class.background-red]="age > 18" [class.background-green]="age < 18">{{name}}</p>
+<p [style.text-decoration]="isTextDecoration">{{age}}</p>
+
+<hr/>
+
+<h1>Event Binding</h1>
+
+<button (click)="birthday()">Envelheça</button>
+
+<input (keydown.shift.t)="onKeyDown($event)" />
